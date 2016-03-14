@@ -1,0 +1,22 @@
+<Configuration status="DEBUG">
+    <Appenders>
+        <Console name="Console">
+            <PatternLayout pattern="[%-5p %d{yyyy-MM-dd HH:mm:ss,SSS}] [THREAD:%t] %c(%L):%m%n"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="Console"/>
+        </Root>
+        <logger name="cn.kisor" level="DEBUG" additivity="false">
+            <AppenderRef ref="Console"/>
+        </logger>
+        <logger name="org.apache" level="ERROR" additivity="false">
+            <AppenderRef ref="Console"/>
+        </logger>
+        <logger name="org.springframework" level="DEBUG" additivity="false">
+            <AppenderRef ref="Console"/>
+        </logger>
+    </Loggers>
+</Configuration>

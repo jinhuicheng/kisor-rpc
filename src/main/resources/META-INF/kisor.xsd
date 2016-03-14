@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.kisor.cn/schema/kisor" elementFormDefault="qualified">
+	<xsd:element name="consumer">
+		<xsd:complexType>
+			<xsd:attribute name="id" type="xsd:string" use="required">
+				<xsd:annotation>
+					<xsd:documentation><![CDATA[ 服务id ]]></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name="interface" type="xsd:string" use="required">
+				<xsd:annotation>
+					<xsd:documentation><![CDATA[ 接口名称 ]]></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="provider">
+		<xsd:complexType>
+			<xsd:attribute name="id" type="xsd:string" use="required">
+				<xsd:annotation>
+					<xsd:documentation><![CDATA[ 服务id ]]></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name="interface" type="xsd:string" use="required">
+				<xsd:annotation>
+					<xsd:documentation><![CDATA[ 服务实现名称 ]]></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name="ref" type="xsd:string" use="required">
+				<xsd:annotation>
+					<xsd:documentation><![CDATA[ 接口实现类  ]]></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
